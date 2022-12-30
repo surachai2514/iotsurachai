@@ -1,6 +1,7 @@
 from flask import Flask, request
 from linebot import LineBotApi, WebhookHandler
 from linebot.models import MessageEvent, TextMessage,TextSendMessage
+from datetime import datetime
 
 import paho.mqtt.client as mqttClient
 import time
@@ -10,6 +11,12 @@ sa = gspread.service_account(filename="iot-esp32-373206-ead1109082b3.json")
 sh = sa.open("googlesheet")
 wks = sh.worksheet("Sheet1")
                             
+nowday = datetime.now()
+date = nowday.strftime("%d/%m/%Y")       #22/12/2022
+#date = nowday.strftime("%B %d, %Y")     #December 22, 2022
+#date = nowday.strftime("%m/%d/%y")      #12/27/22
+#date = nowday.strftime("%b-%d-%Y")      #Dec-27-2022
+times = nowday.strftime("%H:%M:%S") 
 
 temp = ""
 humi = ""
@@ -18,7 +25,8 @@ def on_message(client, userdata, msg):
     global temp,humi
     print(msg.topic+" "+str(msg.payload))
     text_t_h = msg.payload.decode('UTF-8')
-    wks.append_row(text_t_h.split(','))
+    wks.append_row(date, times, text_t_h.split(','))
+    #wks.append_row(text_t_h.split(','))
     t_and_h = text_t_h.split(',')
     temp = t_and_h[0]
     humi = t_and_h[1]
