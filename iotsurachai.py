@@ -5,6 +5,12 @@ from linebot.models import MessageEvent, TextMessage,TextSendMessage
 import paho.mqtt.client as mqttClient
 import time
 
+import gspread
+sa = gspread.service_account(filename="iot-esp32-373206-ead1109082b3.json")
+sh = sa.open("googlesheet")
+wks = sh.worksheet("sheet1")
+                            
+
 temp = ""
 humi = ""
 
@@ -12,6 +18,7 @@ def on_message(client, userdata, msg):
     global temp,humi
     print(msg.topic+" "+str(msg.payload))
     text_t_h = msg.payload.decode('UTF-8')
+    wks.append_row(text_t_h.split(',')
     t_and_h = text_t_h.split(',')
     temp = t_and_h[0]
     humi = t_and_h[1]

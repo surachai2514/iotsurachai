@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "iot-esp32-373206",
+  "private_key_id": "ead1109082b3946798f90fbedb4e1f7450962ba1",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCpBL7qIHpCCjoX\nwXxv+GhPux9msofMSKlF9VqDuV9HHMBHcwGI7ciI/jRTWleaKn/VOiBp/PUJH2Vu\nm3WNVTkfwdjg3mypp6B84chbeeAEahd9LjeGy5LNDUDecW2ttrqN9837AfGoDZMe\nGIT9srbByvSEran4EJyPlwuXuJVpxQ4PcAj/gtKXrtRu6Ay9u2V3H6Vfh/09ctN1\nung5zR4NclS75V0YBfB0tBnt+P03+z+glH7uNbAOU9OKuYkCL5wmZPSmKRDD/ckw\nCB+0RB0+rwaZT59p2F3S+zIKXJ61RZEXQ9gGxY1OQbyC4pGrtnAHpzVkv9BsG8sp\nSGtSBWtDAgMBAAECggEABaBEUJvLJgacH21P3JRKuJi0d2Eq9whWJh+AJ1FU1BOn\nbNltrCaqHbFEgZ/Iubd/cNQR/yUt7ONQJ4niNFWpZJ65vuZ4fH85bt6/Ihhg9hSn\n+oE+1OxS0yOFTMI+0eD6vb4Ja7kJV7w38PEFAELiJXpBgGcdeMXoyDjRaHf69T3N\nlg2+7gAqnsX+uYRqizNBtRAJZMxNCy9ieY937W6G1+vb3ysLo/2HydO8k5dp1uO1\nkjpPgywlcnYvVMac10SSRdzHhX0u8tNX9zLz08cj/3w8s2CFWahqI5Mq3ForNXCW\ntlnj6Vt3/mEkFEt6usJ+Nj+TANMeBM+3E44gwKbmxQKBgQDc0IyH5lEt9WpCGmxj\nCS2cYnLo2UCt1cZ5BXdin2d4qkH/TKfOVRkqPqNnj6O5n2OMw0Ot5Ay03/+5RoQX\nK8L5GOYySF95c4VHhvZp1mGnMRHniTY8oOeRmzc7wZlow17vSXzMFXM234WZEKpV\nXAF6wihrJZcxpT3OYhfDdFKDhQKBgQDD81WwL4mzT0meLlPfu0QorxRNpdKusfbp\nJKLnBtWQ6nhaPiOWRIS124bDOnvSYEI2qA1t4Wu9Uxo255Ey86eoz4cp1oRclFLc\nixiDfxG4k3unljRokqKMf24+vu5UcXwPW4ZbEQUye4KkPu4+RztE3YxBfJPWldiL\nNbXP9456JwKBgAoLPmksE8M4Z4XsN8PldfqoC7wFrch6cdWtZvnIcGdvryLStMtQ\n2Z0vTjV2tibKVjff5eMx/VX43mPqDjYTmoHEHSxqWFVo6MYRIII96yE0vTC/8ASf\n+QiJe+Cu9LBsOpQ9znxl+WCkmCoXNPg/AB46WKZPBmqOrpoFojkUwHAVAoGADjqi\nU0vwbOPqDaGBl7KKjYXBLK5I8USdEGsHpU0avw43tR3kCapqFKafT5f0m98/j6Z+\nayc+Yp4hPjFsms2UtC51uzUHoY1nwvoaypm0mLmk9hNzNNDJGvi58bZ9qgYfoyHb\nTMucnADaCMFFHaKgjCymXa8FMUTqV5mL3VE1uGsCgYAI4SMVy3C3DiOer5ZrqFpl\nYJ3LzWhwQkatQYU5EwH9iPeeT8/NPK+rOT1e2ocXGXr/59hesQgIIBox+ArhaS+P\nhZRUrhklvafNBAxt6IVze6BJNBptielVZjnUvwH2qQJa1bG1qZkHFBNhI9eaxvWe\nbDg5ROTMLQyx6HCsesvMLw==\n-----END PRIVATE KEY-----\n",
+  "client_email": "googlesheet@iot-esp32-373206.iam.gserviceaccount.com",
+  "client_id": "103046854758914451831",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/googlesheet%40iot-esp32-373206.iam.gserviceaccount.com"
+}
