@@ -8,7 +8,7 @@ import time
 import gspread
 sa = gspread.service_account(filename="iot-esp32-373206-ead1109082b3.json")
 sh = sa.open("googlesheet")
-wks = sh.worksheet("sheet1")
+wks = sh.worksheet("Sheet1")
                             
 
 temp = ""
