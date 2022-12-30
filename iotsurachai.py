@@ -22,7 +22,7 @@ temp = ""
 humi = ""
 
 def on_message(client, userdata, msg):
-    global temp,humi
+    global temp,humi,date,times
     print(msg.topic+" "+str(msg.payload))
     text_t_h = msg.payload.decode('UTF-8')
     wks.append_row(date, times, text_t_h.split(','))
