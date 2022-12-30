@@ -25,7 +25,7 @@ def on_message(client, userdata, msg):
     global temp,humi,date,times
     print(msg.topic+" "+str(msg.payload))
     text_t_h = msg.payload.decode('UTF-8')
-    wks.append_row(date, times, text_t_h.split(','))
+    wks.append_row([date, times, text_t_h.split(',')])
     #wks.append_row(text_t_h.split(','))
     t_and_h = text_t_h.split(',')
     temp = t_and_h[0]
