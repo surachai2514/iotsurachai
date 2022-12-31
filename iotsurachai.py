@@ -6,25 +6,11 @@ from datetime import datetime
 import paho.mqtt.client as mqttClient
 import time
 
-from googleapiclient.discovery import build
-from google.oauth2.credentials import Credentials
 import gspread
 sa = gspread.service_account(filename="iot-esp32-373206-ead1109082b3.json")
 sh = sa.open("googlesheet")
 wks = sh.worksheet("Sheet1")
                             
-
-# Set up the Sheets API client
-service = build('sheets', 'v4', credentials=Credentials.from_authorized_user_info())
-
-# Define the spreadsheet ID and range for the data to be appended
-spreadsheet_id = '1MEu_0SHmRa8XNmp5CjKXL7WHGqtwwnlHXAH7ZpEjUSY'
-range_name = 'Sheet1!A1:D1'  # Append data to the first three columns of the first sheet
-
-#date = nowday.strftime("%B %d, %Y")     #December 22, 2022
-#date = nowday.strftime("%m/%d/%y")      #12/27/22
-#date = nowday.strftime("%b-%d-%Y")      #Dec-27-2022
-
 
 temp = ""
 humi = ""
@@ -38,21 +24,13 @@ def on_message(client, userdata, msg):
     time = nowday.strftime("%H:%M:%S")
     
     text_t_h = msg.payload.decode('UTF-8')
-    values = [[date, time, text_t_h]]
-
-    result = service.spreadsheets().values().append(
-        spreadsheetId=spreadsheet_id,
-        range=range_name,
-        insertDataOption='INSERT_ROWS',
-        valueInputOption='RAW',
-        body={'values': values}
-    ).execute()
-    
-    
-    #wks.append_row(text_t_h.split(','))
     t_and_h = text_t_h.split(',')
     temp = t_and_h[0]
     humi = t_and_h[1]
+    
+    values = [[date, time, temp, humi]]
+    wks.append_row(values)
+    
 
 channel_secret = "b84a7a715d28ad8ffe10dd01c12ea072"
 channel_access_token = "gw1Clt9cLIzdHoSgDuwDCoLzxKt1aIbsCspIz6NCLdfT+qQy5Dp0gOtmDV4yceMIvYSHFyOLpnEwQLn5DLKRP4hk7REbOeNQQahogh63V539OpGQBlemj/qdkLtEB3jWyof0B+mIDBxmvClxxvow8gdB04t89/1O/w1cDnyilFU="
