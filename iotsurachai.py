@@ -28,7 +28,7 @@ def on_message(client, userdata, msg):
     temp = t_and_h[0]
     humi = t_and_h[1]
     
-    values = [[date, time, temp, humi]]
+    values = [date, time, temp, humi]
     wks.append_row(values)
     
 
