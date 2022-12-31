@@ -5,6 +5,7 @@ from datetime import datetime
 
 import paho.mqtt.client as mqttClient
 import time
+import pytz
 
 import gspread
 sa = gspread.service_account(filename="iot-esp32-373206-ead1109082b3.json")
@@ -20,6 +21,9 @@ def on_message(client, userdata, msg):
     print(msg.topic+" "+str(msg.payload))
 
     nowday = datetime.now()
+    tz = pytz.timezone('Asia/Bangkok')
+    nowday = nowday.astimezone(tz)
+    
     date = nowday.strftime("%d/%m/%Y")       #22/12/2022
     time = nowday.strftime("%H:%M:%S")
     
